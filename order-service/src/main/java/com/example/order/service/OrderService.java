@@ -15,8 +15,12 @@ import java.util.stream.Collectors;
 @Service
 public class OrderService {
 
+    private final OrderRepository orderRepository;
+
     @Autowired
-    private OrderRepository orderRepository;
+    public OrderService(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
 
     public Optional<OrderResponseDTO> getOrderById(Long id) {
         return orderRepository.findById(id)
