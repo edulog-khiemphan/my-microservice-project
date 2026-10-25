@@ -3,9 +3,9 @@ package com.example.order.controller;
 import com.example.order.dto.OrderResponseDTO;
 import com.example.order.service.OrderService;
 import org.junit.jupiter.api.Test;
-import org.mockito.MockitoBean;
+import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
