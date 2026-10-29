@@ -28,7 +28,7 @@ class ProductControllerTest {
     void getProductById_ExistingId_ReturnsProduct() throws Exception {
         // Given
         Long productId = 1L;
-        ProductResponseDTO mockProduct = new ProductResponseDTO(productId, "Laptop", 1200.0);
+        ProductResponseDTO mockProduct = new ProductResponseDTO(productId, "Laptop", "", 1200.0, 2000);
         when(productService.getProductById(productId)).thenReturn(Optional.of(mockProduct));
 
         // When & Then
